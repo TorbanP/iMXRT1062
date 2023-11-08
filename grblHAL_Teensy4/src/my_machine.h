@@ -24,7 +24,7 @@
 // NOTE: Only one board may be enabled!
 // If none is enabled pin mappings from generic_map.h will be used
 //#define BOARD_T40X101
-//#define BOARD_T41U5XBB
+#define BOARD_T41U5XBB
 //#define BOARD_T41U5XBB_SS // For a modified T41U5XBB board, allows spindle sync to be enabled.
 //#define BOARD_T41BB5X_PRO
 //#define BOARD_CNC_BOOSTERPACK
@@ -35,17 +35,17 @@
 // Uncomment to enable, for some a value > 1 may be assigned, if so the default value is shown.
 
 /*
-              Plugin: | ETHERNET¹ | SDCARD¹ | KEYPAD | EEPROM | N_AXIS |
+              Plugin: | ETHERNETï¿½ | SDCARDï¿½ | KEYPAD | EEPROM | N_AXIS |
 ----------------------|-----------|---------|--------|--------|--------|
-BOARD_T40X101         | no        | no      | yes    | yes³   | max 4  |
-BOARD_T41U5XBB        | yes       | yes     | yes    | yes³   | max 5  |
+BOARD_T40X101         | no        | no      | yes    | yesï¿½   | max 4  |
+BOARD_T41U5XBB        | yes       | yes     | yes    | yesï¿½   | max 5  |
 BOARD_T41BB5X_PRO     | yes       | yes     | yes    | yes    | max 5  |
-BOARD_CNC_BOOSTERPACK | yes²      | yes     | yes    | yes    | max 3  |
+BOARD_CNC_BOOSTERPACK | yesï¿½      | yes     | yes    | yes    | max 3  |
 BOARD_GRBLHAL2000     | yes       | yes     | yes    | yes    | max 5  |
 
-¹ Teensy 4.1 only
-² External magjack.
-³ EEPROM is optional and must be added to the board.
+ï¿½ Teensy 4.1 only
+ï¿½ External magjack.
+ï¿½ EEPROM is optional and must be added to the board.
 
 N_AXIS has a default value of 3, edit grbl\config.h to increase.
 
@@ -59,8 +59,8 @@ N_AXIS has a default value of 3, edit grbl\config.h to increase.
 //#define VFD_ENABLE           1 // Set to 1 or 2 for Huanyang VFD spindle. More here https://github.com/grblHAL/Plugins_spindle
 //#define MODBUS_ENABLE        1 // Set to 1 for auto direction, 2 for direction signal on auxillary output pin.
 //#define WEBUI_ENABLE         3 // Enable ESP3D-WEBUI plugin along with networking and SD card plugins.
-//#define ETHERNET_ENABLE      1 // Ethernet streaming. Enables networking plugin.
-//#define SDCARD_ENABLE        1 // Run gcode programs from SD card. Set to 2 to enable YModem upload.
+#define ETHERNET_ENABLE      1 // Ethernet streaming. Enables networking plugin.
+#define SDCARD_ENABLE        1 // Run gcode programs from SD card. Set to 2 to enable YModem upload.
 //#define LITTLEFS_ENABLE      1 // Enable flash based storage, automatically enabled if WebUI is enabled
 //#define QEI_ENABLE           1 // Enable quadrature encoder interfaces. Max value is 1. Requires encoder plugin.
 //#define MPG_ENABLE           1 // Enable MPG interface. Requires serial port and one handshake pin unless
@@ -72,8 +72,8 @@ N_AXIS has a default value of 3, edit grbl\config.h to increase.
 //#define MACROS_ENABLE        1 // Macros plugin. For macros that can be triggered by keypad plugin or auxillary inputs.
                                  // Set to 1 for aux input triggers, 2 for keypad triggers or 3 for both.
 //#define N_MACROS             1 // Number of macros to enable, max 8. If commented out default is 4 when triggered by aux inputs, 8 otherwise.
-//#define PLASMA_ENABLE        1 // Plasma/THC plugin. To be completed.
-//#define MCP3221_ENABLE       1 // Enable analog input via MCP3221 ADC.
+#define PLASMA_ENABLE        1 // Plasma/THC plugin. To be completed.
+#define MCP3221_ENABLE       1 // Enable analog input via MCP3221 ADC.
 //#define PPI_ENABLE           1 // Laser PPI plugin. To be completed.
 //#define LASER_COOLANT_ENABLE 1 // Laser coolant plugin. To be completed.
 //#define LB_CLUSTERS_ENABLE   1 // LaserBurn cluster support.
@@ -92,7 +92,7 @@ N_AXIS has a default value of 3, edit grbl\config.h to increase.
 //#define X_GANGED             1
 //#define X_AUTO_SQUARE        1
 //#define Y_GANGED             1
-//#define Y_AUTO_SQUARE        1
+#define Y_AUTO_SQUARE        1
 //#define Z_GANGED             1
 //#define Z_AUTO_SQUARE        1
 // For ganged axes the limit switch input (if available) can be configured to act as a max travel limit switch.
